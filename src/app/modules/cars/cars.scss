@@ -1,0 +1,25 @@
+.cars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .rental-info {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: #042759;
+
+    width: 100vw;
+  }
+
+  .car-list {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    gap: 16px;
+  }
+}

@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import carDetailsReducer from "./modules/cars/car-details/car-details.slice";
+import sortedContentReducer from "./modules/cars/sort-content/sorted-content.slice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    carDetails: carDetailsReducer,
+    sortedContent: sortedContentReducer,
   },
 });
 
