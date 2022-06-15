@@ -1,4 +1,4 @@
-.car-container {
+.car-info-container {
   display: flex;
 
   max-width: 650px;
@@ -9,14 +9,14 @@
   border-radius: 10px;
   background-color: white;
 
-  .car-image {
+  .car-info-image {
     height: auto;
     max-width: 250px;
     object-fit: contain;
     margin-right: 8px;
   }
 
-  .car-info {
+  .car-info-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,7 @@
   }
 }
 
-.car-container:hover {
+.car-info-container:hover {
   cursor: pointer;
   border-color: #368cf5;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);

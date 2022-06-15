@@ -8,12 +8,11 @@ import {
 } from "../../shared/mappers/cars.mapper";
 import { ReactComponent as RightIcon } from "../../assets/rightIcon.svg";
 import { CarList } from "./car-list/car-list.component";
-import { SortContent } from "./sort-content/sort-content.component";
 
-export const Cars: React.FC = () => {
+export const Cars = () => {
   const dateTimeFormat = "dd MMM yyyy, hh:mm";
 
-  const [allData, setAllData] = useState<VehVendorAvails[]>();
+  const [carInfo, setCarInfo] = useState<VehVendorAvails[]>();
   const [rentalInfo, setRentalInfo] = useState<VehRentalCore>();
 
   const getCars = () => {
@@ -23,7 +22,7 @@ export const Cars: React.FC = () => {
     );
     const allVendors = vendorsAvailable.map(MAP_TO_UI_VENDORS) || [];
 
-    setAllData(allVendors);
+    setCarInfo(allVendors);
     setRentalInfo(vehRentalCore);
   };
 
@@ -51,11 +50,7 @@ export const Cars: React.FC = () => {
           </div>
         </div>
       )}
-      {allData && (
-        <SortContent data={allData}>
-          <CarList />
-        </SortContent>
-      )}
+      {carInfo && <CarList data={carInfo} />}
     </div>
   );
 };

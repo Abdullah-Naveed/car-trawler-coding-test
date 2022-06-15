@@ -1,4 +1,4 @@
-import { Car, VehVendorAvails } from "../../../shared/models/cars.model";
+import { Car, VehVendorAvails } from "../models/cars.model";
 
 export const sortByPrice = (data: VehVendorAvails[]) => {
   const allCars = data.map(({ VehAvails }) => VehAvails).flat();

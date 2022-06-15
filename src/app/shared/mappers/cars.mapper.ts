@@ -16,10 +16,22 @@ export const MAP_TO_UI_VENDORS = (remote: any): VehVendorAvails => ({
     Code: remote.Vendor["@Code"],
     Name: remote.Vendor["@Name"],
   },
-  VehAvails: remote.VehAvails.map(MAP_TO_UI_CARS),
+  VehAvails: remote.VehAvails.map((car: Car) =>
+    MAP_TO_UI_CARS(car, {
+      code: remote.Vendor["@Code"],
+      name: remote.Vendor["@Name"],
+    })
+  ),
 });
 
-export const MAP_TO_UI_CARS = (remote: any): Car => ({
+export const MAP_TO_UI_CARS = (
+  remote: any,
+  vendor: { code: string; name: string }
+): Car => ({
+  Vendor: {
+    Code: vendor.code,
+    Name: vendor.name,
+  },
   Status: remote["@Status"],
   Vehicle: {
     AirConditionInd: remote.Vehicle["@AirConditionInd"],

@@ -1,21 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../../store";
-import { Car } from "../../../shared/models/cars.model";
-
-export enum SortType {
-  PRICE = "Price",
-  VENDOR = "Vendor",
-  DOORS = "Doors",
-}
+import { RootState } from "../../store";
+import { Car } from "../models/cars.model";
+import { SortType } from "../enums/sort-content.enum";
 
 export type SortedContentState = {
   sortType?: SortType;
-  sortedData?: Car[];
+  sortedContent?: Car[];
 };
 
 const initialState: SortedContentState = {
   sortType: SortType.PRICE,
-  sortedData: [],
+  sortedContent: [],
 };
 
 export const sortedContentSlice = createSlice({
@@ -26,7 +21,7 @@ export const sortedContentSlice = createSlice({
       state.sortType = action.payload.sortType;
     },
     setSortedContent: (state, action: PayloadAction<SortedContentState>) => {
-      state.sortedData = action.payload.sortedData;
+      state.sortedContent = action.payload.sortedContent;
     },
   },
 });
@@ -34,7 +29,7 @@ export const sortedContentSlice = createSlice({
 export const { setSortType, setSortedContent } = sortedContentSlice.actions;
 
 export const selectSortedContent = (state: RootState) =>
-  state.sortedContent.sortedData;
+  state.sortedContent.sortedContent;
 export const selectSortedType = (state: RootState) =>
   state.sortedContent.sortType;
 

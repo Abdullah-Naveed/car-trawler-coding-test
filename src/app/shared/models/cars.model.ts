@@ -18,6 +18,10 @@ export type VehVendorAvails = {
 };
 
 export type Car = {
+  Vendor: {
+    Code: string;
+    Name: string;
+  };
   Status: string;
   Vehicle: {
     AirConditionInd: string;

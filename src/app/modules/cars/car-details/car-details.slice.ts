@@ -5,6 +5,10 @@ import { RootState } from "../../../store";
 export type CarDetailsState = Car;
 
 const initialState: CarDetailsState = {
+  Vendor: {
+    Code: "",
+    Name: "",
+  },
   Status: "",
   Vehicle: {
     AirConditionInd: "",

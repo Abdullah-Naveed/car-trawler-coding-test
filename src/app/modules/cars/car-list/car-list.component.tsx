@@ -1,37 +1,48 @@
 import React from "react";
 import { CarInfo } from "./car-info.component";
-import { Car } from "../../../shared/models/cars.model";
+import { Car, VehVendorAvails } from "../../../shared/models/cars.model";
 import { setCarDetails } from "../car-details/car-details.slice";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../shared/hooks/redux-hooks";
+import { useAppDispatch } from "../../../shared/hooks/redux-hooks";
 import { useNavigate } from "react-router-dom";
-import { selectSortedContent } from "../sort-content/sorted-content.slice";
+import Select from "react-select";
+import { SORT_TYPE_OPTIONS } from "../../../shared/constants/sort-content.constant";
+import { useSortedContent } from "../../../shared/hooks/use-sorted-content.hook";
 
-export const CarList: React.FC = () => {
+type CarListProps = {
+  data: VehVendorAvails[];
+};
+
+export const CarList = ({ data }: CarListProps) => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-
-  const sortedData = useAppSelector(selectSortedContent);
+  const { handleOptionClick, sortedContent, sortType } = useSortedContent(data);
 
   const handleCardClick = (carInfo: Car) => {
     dispatch(setCarDetails(carInfo));
     navigate("/carDetails");
   };
 
-  return sortedData ? (
+  return sortedContent ? (
     <div className="car-list">
-      {sortedData.map(({ Status, Vehicle, TotalCharge }, idx) =>
+      <div className="car-list-header">
+        <h3>Sorted by {sortType}</h3>
+        <Select
+          className="car-list-select"
+          options={SORT_TYPE_OPTIONS}
+          onChange={handleOptionClick}
+        />
+      </div>
+      {sortedContent.map(({ Vendor, Status, Vehicle, TotalCharge }, idx) =>
         Status === "Available" ? (
           <CarInfo
             key={idx}
-            vendorName={"text"}
+            Vendor={Vendor}
             Status={Status}
             Vehicle={Vehicle}
             TotalCharge={TotalCharge}
             onClick={() =>
               handleCardClick({
+                Vendor: Vendor,
                 Status: Status,
                 Vehicle: Vehicle,
                 TotalCharge: TotalCharge,

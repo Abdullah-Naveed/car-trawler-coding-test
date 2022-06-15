@@ -1,15 +1,28 @@
 import React from "react";
 import { useAppSelector } from "../../../shared/hooks/redux-hooks";
 import { selectCarDetails } from "./car-details.slice";
+import { CarInfo } from "../car-list/car-info.component";
 
 export const CarDetails = () => {
-  const { Status, Vehicle, TotalCharge } = useAppSelector(selectCarDetails);
+  const { Vendor, Status, Vehicle, TotalCharge } =
+    useAppSelector(selectCarDetails);
 
   return (
-    <div className="hello">
-      <h1>{Status}</h1>
-      <h1>{Vehicle.VehMakeModel.Name}</h1>
-      <h1>{TotalCharge.EstimatedTotalAmount}</h1>
+    <div
+      className="car-details"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <CarInfo
+        Vendor={Vendor}
+        Status={Status}
+        Vehicle={Vehicle}
+        TotalCharge={TotalCharge}
+      />
     </div>
   );
 };
