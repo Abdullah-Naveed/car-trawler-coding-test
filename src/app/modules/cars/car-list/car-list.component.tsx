@@ -1,5 +1,5 @@
 import React from "react";
-import { CarInfo } from "./car-info.component";
+import { CarInfo } from "../car-info/car-info.component";
 import { Car, VehVendorAvails } from "../../../shared/models/cars.model";
 import { setCarDetails } from "../car-details/car-details.slice";
 import { useAppDispatch } from "../../../shared/hooks/redux-hooks";
