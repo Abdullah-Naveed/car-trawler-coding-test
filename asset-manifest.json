@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/car-trawler-coding-test/static/css/main.a748136d.css",
+    "main.css": "/car-trawler-coding-test/static/css/main.48c7412a.css",
     "main.js": "/car-trawler-coding-test/static/js/main.b580d5e3.js",
     "index.html": "/car-trawler-coding-test/index.html",
     "static/media/rightIcon.svg": "/car-trawler-coding-test/static/media/rightIcon.672657e740c1058fdf5fc99125b4e419.svg",
-    "main.a748136d.css.map": "/car-trawler-coding-test/static/css/main.a748136d.css.map",
+    "main.48c7412a.css.map": "/car-trawler-coding-test/static/css/main.48c7412a.css.map",
     "main.b580d5e3.js.map": "/car-trawler-coding-test/static/js/main.b580d5e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a748136d.css",
+    "static/css/main.48c7412a.css",
     "static/js/main.b580d5e3.js"
   ]
 }
