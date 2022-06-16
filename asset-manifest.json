@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/car-trawler-coding-test/static/css/main.a748136d.css",
+    "main.js": "/car-trawler-coding-test/static/js/main.03e994b4.js",
+    "index.html": "/car-trawler-coding-test/index.html",
+    "static/media/rightIcon.svg": "/car-trawler-coding-test/static/media/rightIcon.672657e740c1058fdf5fc99125b4e419.svg",
+    "main.a748136d.css.map": "/car-trawler-coding-test/static/css/main.a748136d.css.map",
+    "main.03e994b4.js.map": "/car-trawler-coding-test/static/js/main.03e994b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a748136d.css",
+    "static/js/main.03e994b4.js"
+  ]
+}
