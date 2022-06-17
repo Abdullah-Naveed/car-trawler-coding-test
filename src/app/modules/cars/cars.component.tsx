@@ -9,7 +9,7 @@ import {
 import { ReactComponent as RightIcon } from "../../theme/assets/rightIcon.svg";
 import { CarList } from "./car-list/car-list.component";
 
-export const Cars = () => {
+const Cars = () => {
   const dateTimeFormat = "dd MMM yyyy, hh:mm";
 
   const [carInfo, setCarInfo] = useState<VehVendorAvails[]>();
@@ -54,3 +54,5 @@ export const Cars = () => {
     </div>
   );
 };
+
+export default Cars;

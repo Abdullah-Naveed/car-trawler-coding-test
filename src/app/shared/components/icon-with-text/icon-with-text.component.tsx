@@ -9,7 +9,7 @@ export const IconWithText = ({ Icon, text }: IconWithTextProps) => {
   return (
     <div
       className="icon-with-text"
-      style={{ display: "flex", alignItems: "center", gap: 4 }}
+      style={{ paddingRight: text && 4 }}
     >
       {Icon}
       {text}

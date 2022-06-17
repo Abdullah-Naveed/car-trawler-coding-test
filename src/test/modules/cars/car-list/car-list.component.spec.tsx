@@ -32,10 +32,7 @@ describe("CarList", () => {
   });
 
   beforeEach(() => {
-    withRouterAndReduxProvider(
-      <CarList data={carListMockData} />,
-      store
-    );
+    withRouterAndReduxProvider(<CarList data={carListMockData} />, store);
   });
 
   test("renders successfully", () => {

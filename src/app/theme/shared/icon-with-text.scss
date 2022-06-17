@@ -1,4 +1,8 @@
 .icon-with-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
   background-color: lightgrey;
   border-radius: 4px;
   padding: 2px;

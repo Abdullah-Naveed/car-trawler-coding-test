@@ -23,11 +23,11 @@ jobs:
       - name: Test
         run: npm run test
 
-#      - name: Lint
-#        run:
-#
-#      - name: Code Analysis
-#        run:
+      #      - name: Lint
+      #        run:
+      #
+      #      - name: Code Analysis
+      #        run:
 
       - name: Build
         run: npm run build
