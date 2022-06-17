@@ -1,10 +1,10 @@
-import { Car } from "../../../shared/models/cars.model";
+import { Car } from "../models/cars.model";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../../store";
+import { RootState } from "../../store";
 
 export type CarDetailsState = Car;
 
-const initialState: CarDetailsState = {
+export const initialStateCarDetails: CarDetailsState = {
   Vendor: {
     Code: "",
     Name: "",
@@ -34,9 +34,10 @@ const initialState: CarDetailsState = {
 
 export const carDetailsSlice = createSlice({
   name: "carDetails",
-  initialState,
+  initialState: initialStateCarDetails,
   reducers: {
     setCarDetails: (state, action: PayloadAction<CarDetailsState>) => {
+      state.Vendor = action.payload.Vendor;
       state.Status = action.payload.Status;
       state.Vehicle = action.payload.Vehicle;
       state.TotalCharge = action.payload.TotalCharge;

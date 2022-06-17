@@ -24,7 +24,6 @@ export const useSortedContent = (data: VehVendorAvails[]) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, sortType]);
 
-  //useCallback used so this function is not re-created everytime this component renders, only when sortType changes.
   const sortContent = useCallback(
     (data: VehVendorAvails[]) => {
       switch (sortType) {
@@ -44,8 +43,8 @@ export const useSortedContent = (data: VehVendorAvails[]) => {
     [sortType]
   );
 
-  const handleOptionClick = (e: any) => dispatch(setSortType({ sortType: e.value }));
-
+  const handleOptionClick = (e: any) =>
+    dispatch(setSortType({ sortType: e.value }));
 
   return { handleOptionClick, sortedContent, sortType };
 };

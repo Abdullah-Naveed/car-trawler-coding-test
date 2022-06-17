@@ -1,8 +1,9 @@
 .car-info-container {
   display: flex;
+  justify-content: space-evenly;
 
-  max-width: 650px;
-  height: 200px;
+  max-width: 700px;
+  min-height: 200px;
   padding: 0 16px 0 16px;
 
   border: 1px solid lightgray;
@@ -19,8 +20,18 @@
   .car-info-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 8px;
+
+    .car-info-header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .car-info-footer {
+      display: flex;
+      gap: 16px;
+    }
   }
 }
 

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { format as formatDate } from "date-fns";
-import data from "./cars.json";
+import data from "./cars-mock.json";
 import { VehRentalCore, VehVendorAvails } from "../../shared/models/cars.model";
 import {
   MAP_TO_UI_RENTAL_INFO,
   MAP_TO_UI_VENDORS,
 } from "../../shared/mappers/cars.mapper";
-import { ReactComponent as RightIcon } from "../../assets/rightIcon.svg";
+import { ReactComponent as RightIcon } from "../../theme/assets/rightIcon.svg";
 import { CarList } from "./car-list/car-list.component";
 
 export const Cars = () => {

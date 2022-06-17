@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import carDetailsReducer from "./modules/cars/car-details/car-details.slice";
+import carDetailsReducer from "./shared/slice/car-details.slice";
 import sortedContentReducer from "./shared/slice/sorted-content.slice";
 
 export const store = configureStore({

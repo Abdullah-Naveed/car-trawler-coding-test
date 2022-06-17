@@ -1,7 +1,7 @@
 import React from "react";
 import { CarInfo } from "../car-info/car-info.component";
 import { Car, VehVendorAvails } from "../../../shared/models/cars.model";
-import { setCarDetails } from "../car-details/car-details.slice";
+import { setCarDetails } from "../../../shared/slice/car-details.slice";
 import { useAppDispatch } from "../../../shared/hooks/redux-hooks";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
@@ -23,7 +23,7 @@ export const CarList = ({ data }: CarListProps) => {
   };
 
   return sortedContent ? (
-    <div className="car-list">
+    <div className="car-list" data-testid="car-list-testId">
       <div className="car-list-header">
         <h3>Sorted by {sortType}</h3>
         <Select

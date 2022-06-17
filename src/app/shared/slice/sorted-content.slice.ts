@@ -8,14 +8,14 @@ export type SortedContentState = {
   sortedContent?: Car[];
 };
 
-const initialState: SortedContentState = {
+export const initialStateSortedContent: SortedContentState = {
   sortType: SortType.PRICE,
   sortedContent: [],
 };
 
 export const sortedContentSlice = createSlice({
   name: "sortedContent",
-  initialState,
+  initialState: initialStateSortedContent,
   reducers: {
     setSortType: (state, action: PayloadAction<SortedContentState>) => {
       state.sortType = action.payload.sortType;

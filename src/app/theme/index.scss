@@ -1,5 +1,4 @@
+@import "app";
 @import "reset";
-@import "../modules/cars/car-info/car-info";
-@import "../modules/cars/cars";
-@import "../modules/cars/car-list/car-list";
-@import "../modules/cars/car-details/car-details";
+@import "../theme/modules/cars";
+@import "../theme/shared/icon-with-text";

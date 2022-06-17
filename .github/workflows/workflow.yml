@@ -17,8 +17,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Install and build
-        run: npm install && npm run build
+      - name: Install
+        run: npm install
+
+      - name: Test
+        run: npm run test
+
+#      - name: Lint
+#        run:
+#
+#      - name: Code Analysis
+#        run:
+
+      - name: Build
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1

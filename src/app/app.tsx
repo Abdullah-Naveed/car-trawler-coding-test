@@ -1,5 +1,5 @@
 import React from "react";
-import "./theme/app.css";
+import "./theme/app.scss";
 import { Routes, Route } from "react-router-dom";
 import { CarDetails } from "./modules/cars/car-details/car-details.component";
 import { Cars } from "./modules/cars/cars.component";
