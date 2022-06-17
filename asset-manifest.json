@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/car-trawler-coding-test/static/css/main.48c7412a.css",
-    "main.js": "/car-trawler-coding-test/static/js/main.b580d5e3.js",
+    "main.css": "/car-trawler-coding-test/static/css/main.7a29205a.css",
+    "main.js": "/car-trawler-coding-test/static/js/main.596a1a3e.js",
     "index.html": "/car-trawler-coding-test/index.html",
     "static/media/rightIcon.svg": "/car-trawler-coding-test/static/media/rightIcon.672657e740c1058fdf5fc99125b4e419.svg",
-    "main.48c7412a.css.map": "/car-trawler-coding-test/static/css/main.48c7412a.css.map",
-    "main.b580d5e3.js.map": "/car-trawler-coding-test/static/js/main.b580d5e3.js.map"
+    "static/media/bags.svg": "/car-trawler-coding-test/static/media/bags.89c75e2397743330d5a04879f5820c31.svg",
+    "static/media/person.svg": "/car-trawler-coding-test/static/media/person.11f20fb54eb12152820dc2eda6d65434.svg",
+    "static/media/aircon.svg": "/car-trawler-coding-test/static/media/aircon.d8d73cad7037524ef77cf9101d34ecf0.svg",
+    "main.7a29205a.css.map": "/car-trawler-coding-test/static/css/main.7a29205a.css.map",
+    "main.596a1a3e.js.map": "/car-trawler-coding-test/static/js/main.596a1a3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.48c7412a.css",
-    "static/js/main.b580d5e3.js"
+    "static/css/main.7a29205a.css",
+    "static/js/main.596a1a3e.js"
   ]
 }
