@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/car-trawler-coding-test/static/css/main.7a29205a.css",
-    "main.js": "/car-trawler-coding-test/static/js/main.43ed3788.js",
-    "static/js/389.a536938e.chunk.js": "/car-trawler-coding-test/static/js/389.a536938e.chunk.js",
-    "static/js/377.a5cba610.chunk.js": "/car-trawler-coding-test/static/js/377.a5cba610.chunk.js",
+    "main.css": "/car-trawler-coding-test/static/css/main.c83b82f0.css",
+    "main.js": "/car-trawler-coding-test/static/js/main.f7948cfb.js",
+    "static/js/389.72dabfa3.chunk.js": "/car-trawler-coding-test/static/js/389.72dabfa3.chunk.js",
+    "static/js/377.8688529c.chunk.js": "/car-trawler-coding-test/static/js/377.8688529c.chunk.js",
     "static/js/492.81a6ff1f.chunk.js": "/car-trawler-coding-test/static/js/492.81a6ff1f.chunk.js",
     "index.html": "/car-trawler-coding-test/index.html",
     "static/media/rightIcon.svg": "/car-trawler-coding-test/static/media/rightIcon.672657e740c1058fdf5fc99125b4e419.svg",
     "static/media/bags.svg": "/car-trawler-coding-test/static/media/bags.89c75e2397743330d5a04879f5820c31.svg",
     "static/media/person.svg": "/car-trawler-coding-test/static/media/person.11f20fb54eb12152820dc2eda6d65434.svg",
     "static/media/aircon.svg": "/car-trawler-coding-test/static/media/aircon.d8d73cad7037524ef77cf9101d34ecf0.svg",
-    "main.7a29205a.css.map": "/car-trawler-coding-test/static/css/main.7a29205a.css.map",
-    "main.43ed3788.js.map": "/car-trawler-coding-test/static/js/main.43ed3788.js.map",
-    "389.a536938e.chunk.js.map": "/car-trawler-coding-test/static/js/389.a536938e.chunk.js.map",
-    "377.a5cba610.chunk.js.map": "/car-trawler-coding-test/static/js/377.a5cba610.chunk.js.map",
+    "main.c83b82f0.css.map": "/car-trawler-coding-test/static/css/main.c83b82f0.css.map",
+    "main.f7948cfb.js.map": "/car-trawler-coding-test/static/js/main.f7948cfb.js.map",
+    "389.72dabfa3.chunk.js.map": "/car-trawler-coding-test/static/js/389.72dabfa3.chunk.js.map",
+    "377.8688529c.chunk.js.map": "/car-trawler-coding-test/static/js/377.8688529c.chunk.js.map",
     "492.81a6ff1f.chunk.js.map": "/car-trawler-coding-test/static/js/492.81a6ff1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a29205a.css",
-    "static/js/main.43ed3788.js"
+    "static/css/main.c83b82f0.css",
+    "static/js/main.f7948cfb.js"
   ]
 }
