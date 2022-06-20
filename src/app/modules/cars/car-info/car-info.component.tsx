@@ -1,13 +1,13 @@
-import React from "react";
-import { Car } from "../../../shared/models/cars.model";
-import { IconWithText } from "../../../shared/components/icon-with-text/icon-with-text.component";
-import { ReactComponent as PassengersIcon } from "../../../theme/assets/person.svg";
-import { ReactComponent as BaggageIcon } from "../../../theme/assets/bags.svg";
-import { ReactComponent as AirconIcon } from "../../../theme/assets/aircon.svg";
+import React from 'react'
+import { Car } from '../../../shared/models/cars.model'
+import { IconWithText } from '../../../shared/components/icon-with-text/icon-with-text.component'
+import { ReactComponent as PassengersIcon } from '../../../theme/assets/person.svg'
+import { ReactComponent as BaggageIcon } from '../../../theme/assets/bags.svg'
+import { ReactComponent as AirconIcon } from '../../../theme/assets/aircon.svg'
 
 type CarInfoProps = {
-  onClick?: () => void;
-} & Car;
+  onClick?: () => void
+} & Car
 
 export const CarInfo = ({
   Vendor,
@@ -33,7 +33,7 @@ export const CarInfo = ({
             text={Vehicle.PassengerQuantity}
           />
           <IconWithText Icon={<BaggageIcon />} text={Vehicle.BaggageQuantity} />
-          {Vehicle.AirConditionInd === "true" ? (
+          {Vehicle.AirConditionInd === 'true' ? (
             <IconWithText Icon={<AirconIcon />} />
           ) : null}
         </header>
@@ -44,5 +44,5 @@ export const CarInfo = ({
         </footer>
       </section>
     </div>
-  );
-};
+  )
+}

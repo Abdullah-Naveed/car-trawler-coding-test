@@ -1,16 +1,21 @@
-import { SortType } from "../enums/sort-content.enum";
+import { SortType } from '../enums/sort-content.enum'
 
-export const SORT_TYPE_OPTIONS = [
+export type SelectSortOptions = {
+  value: string
+  label: SortType
+}
+
+export const SORT_TYPE_OPTIONS: SelectSortOptions[] = [
   {
-    value: "Price",
+    value: 'Price',
     label: SortType.PRICE,
   },
   {
-    value: "Vendor",
+    value: 'Vendor',
     label: SortType.VENDOR,
   },
   {
-    value: "Doors",
+    value: 'Doors',
     label: SortType.DOORS,
   },
-];
+]

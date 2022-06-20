@@ -1,11 +1,11 @@
-import React, { lazy, Suspense } from "react";
-import "./theme/app.scss";
-import { Routes, Route } from "react-router-dom";
+import React, { lazy, Suspense } from 'react'
+import './theme/app.scss'
+import { Routes, Route } from 'react-router-dom'
 
-const Cars = lazy(() => import("./modules/cars/cars.component"));
+const Cars = lazy(() => import('./modules/cars/cars.component'))
 const CarDetails = lazy(
-  () => import("./modules/cars/car-details/car-details.component")
-);
+  () => import('./modules/cars/car-details/car-details.component'),
+)
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         </Routes>
       </Suspense>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,11 +1,11 @@
-import React from "react";
-import { useAppSelector } from "../../../shared/hooks/redux-hooks";
-import { selectCarDetails } from "../../../shared/slice/car-details.slice";
-import { CarInfo } from "../car-info/car-info.component";
+import React from 'react'
+import { useAppSelector } from '../../../shared/hooks/redux-hooks'
+import { selectCarDetails } from '../../../shared/slice/car-details.slice'
+import { CarInfo } from '../car-info/car-info.component'
 
 const CarDetails = () => {
   const { Vendor, Status, Vehicle, TotalCharge } =
-    useAppSelector(selectCarDetails);
+    useAppSelector(selectCarDetails)
 
   return (
     <div className="car-details">
@@ -16,7 +16,7 @@ const CarDetails = () => {
         TotalCharge={TotalCharge}
       />
     </div>
-  );
-};
+  )
+}
 
-export default CarDetails;
+export default CarDetails

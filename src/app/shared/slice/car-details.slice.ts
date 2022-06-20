@@ -1,52 +1,52 @@
-import { Car } from "../models/cars.model";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../store";
+import { Car } from '../models/cars.model'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { RootState } from '../../store'
 
-export type CarDetailsState = Car;
+export type CarDetailsState = Car
 
 export const initialStateCarDetails: CarDetailsState = {
   Vendor: {
-    Code: "",
-    Name: "",
+    Code: '',
+    Name: '',
   },
-  Status: "",
+  Status: '',
   Vehicle: {
-    AirConditionInd: "",
-    TransmissionType: "",
-    FuelType: "",
-    DriveType: "",
-    PassengerQuantity: "",
-    BaggageQuantity: "",
-    Code: "",
-    CodeContext: "",
-    DoorCount: "",
+    AirConditionInd: '',
+    TransmissionType: '',
+    FuelType: '',
+    DriveType: '',
+    PassengerQuantity: '',
+    BaggageQuantity: '',
+    Code: '',
+    CodeContext: '',
+    DoorCount: '',
     VehMakeModel: {
-      Name: "",
+      Name: '',
     },
-    PictureURL: "",
+    PictureURL: '',
   },
   TotalCharge: {
-    RateTotalAmount: "",
-    EstimatedTotalAmount: "",
-    CurrencyCode: "",
+    RateTotalAmount: '',
+    EstimatedTotalAmount: '',
+    CurrencyCode: '',
   },
-};
+}
 
 export const carDetailsSlice = createSlice({
-  name: "carDetails",
+  name: 'carDetails',
   initialState: initialStateCarDetails,
   reducers: {
     setCarDetails: (state, action: PayloadAction<CarDetailsState>) => {
-      state.Vendor = action.payload.Vendor;
-      state.Status = action.payload.Status;
-      state.Vehicle = action.payload.Vehicle;
-      state.TotalCharge = action.payload.TotalCharge;
+      state.Vendor = action.payload.Vendor
+      state.Status = action.payload.Status
+      state.Vehicle = action.payload.Vehicle
+      state.TotalCharge = action.payload.TotalCharge
     },
   },
-});
+})
 
-export const { setCarDetails } = carDetailsSlice.actions;
+export const { setCarDetails } = carDetailsSlice.actions
 
-export const selectCarDetails = (state: RootState) => state.carDetails;
+export const selectCarDetails = (state: RootState) => state.carDetails
 
-export default carDetailsSlice.reducer;
+export default carDetailsSlice.reducer

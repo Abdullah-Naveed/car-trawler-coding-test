@@ -1,46 +1,46 @@
 export type VehRentalCore = {
-  PickUpDateTime: string;
-  ReturnDateTime: string;
+  PickUpDateTime: string
+  ReturnDateTime: string
   PickUpLocation: {
-    Name: string;
-  };
+    Name: string
+  }
   ReturnLocation: {
-    Name: string;
-  };
-};
+    Name: string
+  }
+}
 
 export type VehVendorAvails = {
   Vendor: {
-    Code: string;
-    Name: string;
-  };
-  VehAvails: Car[];
-};
+    Code: string
+    Name: string
+  }
+  VehAvails: Car[]
+}
 
 export type Car = {
   Vendor: {
-    Code: string;
-    Name: string;
-  };
-  Status: string;
+    Code: string
+    Name: string
+  }
+  Status: string
   Vehicle: {
-    AirConditionInd: string;
-    TransmissionType: string;
-    FuelType: string;
-    DriveType: string;
-    PassengerQuantity: string;
-    BaggageQuantity: string;
-    Code: string;
-    CodeContext: string;
-    DoorCount: string;
+    AirConditionInd: string
+    TransmissionType: string
+    FuelType: string
+    DriveType: string
+    PassengerQuantity: string
+    BaggageQuantity: string
+    Code: string
+    CodeContext: string
+    DoorCount: string
     VehMakeModel: {
-      Name: string;
-    };
-    PictureURL: string;
-  };
+      Name: string
+    }
+    PictureURL: string
+  }
   TotalCharge: {
-    RateTotalAmount: string;
-    EstimatedTotalAmount: string;
-    CurrencyCode: string;
-  };
-};
+    RateTotalAmount: string
+    EstimatedTotalAmount: string
+    CurrencyCode: string
+  }
+}

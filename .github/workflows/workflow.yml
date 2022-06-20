@@ -3,7 +3,7 @@ name: Github Pages Deploy
 on:
   push:
     branches:
-      - "master"
+      - 'master'
 
 jobs:
   build:
@@ -23,11 +23,11 @@ jobs:
       - name: Test
         run: npm run test
 
-      #      - name: Lint
-      #        run:
-      #
+      - name: Lint
+        run: npm run lint
+
       #      - name: Code Analysis
-      #        run:
+      #        run: [sonarqube]
 
       - name: Build
         run: npm run build

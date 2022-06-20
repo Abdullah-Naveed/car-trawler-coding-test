@@ -1,50 +1,52 @@
-import { useCallback, useEffect } from "react";
-import { VehVendorAvails } from "../models/cars.model";
-import { useAppDispatch, useAppSelector } from "./redux-hooks";
+import { useCallback, useEffect } from 'react'
+import { VehVendorAvails } from '../models/cars.model'
+import { useAppDispatch, useAppSelector } from './redux-hooks'
 import {
   selectSortedContent,
   selectSortedType,
   setSortedContent,
   setSortType,
-} from "../slice/sorted-content.slice";
-import { SortType } from "../enums/sort-content.enum";
+} from '../slice/sorted-content.slice'
+import { SortType } from '../enums/sort-content.enum'
 import {
   sortByNumberOfDoors,
   sortByPrice,
   sortByVendor,
-} from "../utils/sort-content.util";
+} from '../utils/sort-content.util'
+import { SelectSortOptions } from '../constants/sort-content.constant'
+import { SingleValue } from 'react-select'
 
 export const useSortedContent = (data: VehVendorAvails[]) => {
-  const dispatch = useAppDispatch();
-  const sortType = useAppSelector(selectSortedType);
-  const sortedContent = useAppSelector(selectSortedContent);
+  const dispatch = useAppDispatch()
+  const sortType = useAppSelector(selectSortedType)
+  const sortedContent = useAppSelector(selectSortedContent)
 
   useEffect(() => {
-    sortContent(data);
+    sortContent(data)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, sortType]);
+  }, [data, sortType])
 
   const sortContent = useCallback(
     (data: VehVendorAvails[]) => {
       switch (sortType) {
         case SortType.VENDOR:
-          dispatch(setSortedContent({ sortedContent: sortByVendor(data) }));
-          break;
+          dispatch(setSortedContent({ sortedContent: sortByVendor(data) }))
+          break
         case SortType.DOORS:
           dispatch(
-            setSortedContent({ sortedContent: sortByNumberOfDoors(data) })
-          );
-          break;
+            setSortedContent({ sortedContent: sortByNumberOfDoors(data) }),
+          )
+          break
         default:
-          dispatch(setSortedContent({ sortedContent: sortByPrice(data) }));
+          dispatch(setSortedContent({ sortedContent: sortByPrice(data) }))
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sortType]
-  );
+    [sortType],
+  )
 
-  const handleOptionClick = (e: any) =>
-    dispatch(setSortType({ sortType: e.value }));
+  const handleOptionClick = (e: SingleValue<SelectSortOptions>) =>
+    dispatch(setSortType({ sortType: e?.value }))
 
-  return { handleOptionClick, sortedContent, sortType };
-};
+  return { handleOptionClick, sortedContent, sortType }
+}
